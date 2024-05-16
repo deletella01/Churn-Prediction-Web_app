@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 import pickle
+from tensorflow.keras.models import load_model
+import warnings
+warnings.filterwarnings('ignore')
 
 st.write("""
 # Churn Prediction and Customer Retention App
@@ -120,11 +123,10 @@ else:
   d2['PaymentMethod_Electronic check'] = 0
 
 # Reads in saved classification model
-load_model = pickle.load(open('churn_model.pkl', 'rb'))
+load_model = load_model('churn_model.h5')
 
 # Apply model to make predictions
 prediction = load_model.predict(d2)
-
 
 st.subheader('Prediction')
 if prediction > 0.5:
