@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.models import load_model
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -123,7 +123,8 @@ else:
   d2['PaymentMethod_Electronic check'] = 0
 
 # Reads in saved classification model
-load_model = load_model('churn_model.h5')
+#load_model = load_model('churn_model.h5')
+load_model = pickle.load(open('churn_model.pkl', 'rb'))
 
 # Apply model to make predictions
 prediction = load_model.predict(d2)
