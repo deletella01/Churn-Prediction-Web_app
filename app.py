@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')
 
 st.write("""
 # Churn Prediction and Customer Retention App
-This app forecasts consumer behavior. The objective is to create a targeted client retention program by analyzing all pertinent customer data.
+This app forecasts consumer behaviour. The objective is to create a targeted client retention program by analyzing all pertinent customer data.
 
 Data obtained from [Kaggle Library](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 """)
@@ -19,7 +19,7 @@ def user_input_Features():
   seniorCitizen = st.sidebar.selectbox('Senior Citizen', ('Yes', 'No'))
   partner = st.sidebar.selectbox('Partner',('Yes', 'No'))
   dependents = st.sidebar.selectbox('Dependents',('Yes', 'No'))
-  tenure = st.sidebar.slider('Tenure(Years))', 0, 75, 20)
+  tenure = st.sidebar.slider('Tenure(Months))', 0, 75, 6)
   PhoneService = st.sidebar.selectbox('Phone Service',('Yes', 'No'))
   MultipleLines = st.sidebar.selectbox('Multiple Lines',('Yes', 'No'))
   OnlineSecurity = st.sidebar.selectbox('Online Security',('Yes', 'No'))
@@ -29,8 +29,8 @@ def user_input_Features():
   StreamingTV = st.sidebar.selectbox('Streaming TV',('Yes', 'No'))
   StreamingMovies = st.sidebar.selectbox('Streaming Movies',('Yes', 'No'))
   PaperlessBilling = st.sidebar.selectbox('Paperless Billing',('Yes', 'No'))
-  MonthlyCharges = st.sidebar.slider('Monthly Charge', 18, 118, 70)
-  TotalCharges = st.sidebar.slider('Total Charge', 18, 8685, 1000)
+  MonthlyCharges = st.sidebar.slider('Monthly Charge', 18, 118, 80)
+  TotalCharges = st.sidebar.slider('Total Charge', 18, 8685, 3000)
 
   InternetService = st.sidebar.selectbox('Internet Service',('DSL','Fiber Optic','No'))
   Contract = st.sidebar.selectbox('Contract', ('Month-to-month', 'One year', 'Two year'))
@@ -124,7 +124,7 @@ else:
 
 # Reads in saved classification model
 load_model = load_model('churn_model.h5')
-#load_model = pickle.load(open('churn_model.pkl', 'rb'))
+
 
 # Apply model to make predictions
 prediction = load_model.predict(d2)
@@ -132,7 +132,7 @@ prediction = load_model.predict(d2)
 st.subheader('Prediction')
 if prediction > 0.5:
   st.write('YES')
-  st.write('Customer will leave the company')
+  st.write('Customer will leave the Company')
 else:
   st.write('NO')
-  st.write('Customer will stay with the company')
+  st.write('Customer will stay with the Company')
