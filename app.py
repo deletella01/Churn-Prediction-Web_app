@@ -19,7 +19,7 @@ def user_input_Features():
   seniorCitizen = st.sidebar.selectbox('Senior Citizen', ('Yes', 'No'))
   partner = st.sidebar.selectbox('Partner',('Yes', 'No'))
   dependents = st.sidebar.selectbox('Dependents',('Yes', 'No'))
-  tenure = st.sidebar.slider('Tenure(Months))', 0, 75, 6)
+  tenure = st.sidebar.slider('Tenure(Months)', 0, 75, 6)
   PhoneService = st.sidebar.selectbox('Phone Service',('Yes', 'No'))
   MultipleLines = st.sidebar.selectbox('Multiple Lines',('Yes', 'No'))
   OnlineSecurity = st.sidebar.selectbox('Online Security',('Yes', 'No'))
