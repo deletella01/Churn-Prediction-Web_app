@@ -12,5 +12,15 @@ By monitoring customer churn, I aim to help Telco:
 - Gain a competitive advantage in the market
 
 ## Technical Development
+All codes for the Churn prediction Web Application were written on Google Colab Notebook and can be viewed **[here](https://colab.research.google.com/drive/1NGiU1fiq03IULWttnEc70hRE_dNQjojI?usp=sharing)** Streamlit was used to build and design the webpage as well as its features.
+
 ## Conclusion
-This is a web application used to predict customer churn. Google Colab was used to build this application.
+This Customer Retention Web Application predicted customer churn with an accuracy of 80%. The applications of a web application for churn prediction can find usefulness in the following services:
+- Marketing and Sales: Target re-engagement campaigns and allocate resources efficiently.
+- Product Improvement: Use churn data for product enhancements and feature development.
+- Financial Forecasting: Predict revenue and assess financial risk.
+- Customer Support: Provide proactive support and allocate resources effectively.
+- Subscription Services: Encourage renewals and analyze usage patterns.
+- Telecommunications: Optimize service plans and manage contract renewals.
+- E-commerce and Retail: Improve retention strategies and offer personalized recommendations.
+- Banking and Financial Services: Offer personalized advice and enhance services
