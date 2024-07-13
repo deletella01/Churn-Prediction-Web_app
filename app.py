@@ -7,7 +7,10 @@ warnings.filterwarnings('ignore')
 
 st.write("""
 # Churn Prediction and Customer Retention App
-This app forecasts consumer behaviour. The objective is to create a targeted client retention program by analyzing all pertinent customer data.
+Telco Systems is a global leader in telecommunications, with over 40 years of experience in designing and developing high-performance network communications solutions.
+With its advanced software and hardware solutions, Telco Systems provides a revolutionary approach to the network edge for service providers, allowing them to offer customers the highest levels of service innovation.
+
+This app aims to predict consumer behaviour. The objective is to create a targeted client retention program by analyzing all pertinent customer data.
 
 Data obtained from [Kaggle Library](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 """)
